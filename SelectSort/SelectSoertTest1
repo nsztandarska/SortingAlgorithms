@@ -1,0 +1,18 @@
+public class SelectSortTest {
+
+    @Test
+    public void givenUnsortedArrayOfIntegers_whenSortedWithSelectSortAlgorithm_thenGetSortedArray() {
+
+        //given
+
+        int[] unsortedArray = new int[]{6, 8, 17, -2, 11, 1};
+        int[] output = new int[]{-2, 1, 6, 8, 11, 17};
+        SelectSort ss = new SelectSort();
+
+        //when
+        ss.selectSort(unsortedArray);
+
+        //then
+        Assert.assertArrayEquals(output, unsortedArray);
+    }
+}
