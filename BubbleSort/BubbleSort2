@@ -1,0 +1,27 @@
+public class BubbleSortOptimized {
+
+    public void sort(int[] input) {
+
+        int n = input.length;
+        int it = 0;
+        boolean swapped = true;
+
+        while(it < n-1 && swapped) {
+            swapped = false;
+            for (int i = 0; i < n -1 - it; i++) {
+                if (input[i] > input[i + 1]) {
+                    swap(input, i, i + 1);
+                    swapped = true;
+                }
+            }
+            it++;
+        }
+    }
+
+    private static void swap(int[] input, int index1, int index2) {
+
+        int temp  = input[index1];
+        input[index1] = input[index2];
+        input[index2] = temp;
+    }
+}
