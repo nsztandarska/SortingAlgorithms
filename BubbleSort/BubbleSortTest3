@@ -1,0 +1,27 @@
+import org.junit.Assert;
+import org.junit.Test;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class BubbleSortVersion3Test {
+    @Test
+    public void givenIntegerArray_whenSortedWithOptimizedBubbleSort_thenGetSortedArray() {
+        //given
+        ArrayList<Integer> arrayToSort = new ArrayList<>();
+        arrayToSort.add(-5);
+        arrayToSort.add(15);
+        arrayToSort.add(11);
+        arrayToSort.add(0);
+        arrayToSort.add(22);
+        arrayToSort.add(1);
+
+        ArrayList<Integer> sortedArray = new ArrayList<>(Arrays.asList(-5, 0, 1, 11, 15, 22));
+        BubbleSortVersion3 bsv3 = new BubbleSortVersion3();
+
+        //when
+        bsv3.sort(arrayToSort);
+
+        //then
+        Assert.assertEquals(arrayToSort, sortedArray);
+    }
+}
