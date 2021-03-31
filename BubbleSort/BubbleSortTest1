@@ -1,0 +1,28 @@
+import org.junit.Assert;
+import org.junit.Test;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class BubbleSortTest {
+
+    @Test
+    public void bubbleSort() {
+        // given
+        ArrayList<Integer> arrayToSort = new ArrayList<>();
+        arrayToSort.add(-5);
+        arrayToSort.add(15);
+        arrayToSort.add(11);
+        arrayToSort.add(0);
+        arrayToSort.add(22);
+        arrayToSort.add(1);
+
+        ArrayList<Integer> sortedArray = new ArrayList<>(Arrays.asList(-5, 0, 1, 11, 15, 22));
+        BubbleSort bs = new BubbleSort(arrayToSort);
+
+        // when
+        bs.bubbleSort(arrayToSort);
+
+        //then
+        Assert.assertEquals(arrayToSort, sortedArray);
+    }
+}
